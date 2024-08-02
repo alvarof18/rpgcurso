@@ -1,0 +1,28 @@
+      *****************************************************************
+      * Nombre: Alvaro Figueroa                                       *
+      * Objetivo: Archivo de productos                                *
+      *****************************************************************
+                                            UNIQUE
+                R RRETPRO
+                  REPCOD         9S 0       COLHDG('CODIGO')
+                  REPNOM       100A         COLHDG('NOMBRE')
+                  REPSTK         5S 0       COLHDG('STOCK')
+                  REPPRI         8S 2       COLHDG('PRECIO')
+                  REPEST         1A         COLHDG('ESTADO')
+      * A = Activo
+      * I = Inactivo
+
+                  REPCAT         4A         COLHDG('CATEGORIA')
+      * Tabla CP
+                  REPTME         4A         COLHDG('MEDIDA')
+      * Tabla MP
+                  REPPRO         9S         COLHDG('PROVEEDOR')
+                  REPIAA         4S 0       COLHDG('CREACION PRO ANIO')
+                  REPIMM         2S 0       COLHDG('CREACION PRO MES')
+                  REPIDD         2S 0       COLHDG('CREACION PRO DIA')
+                  REPTIM          Z         COLHDG('CREACION TIME')
+                  REPAAA         4S 0       COLHDG('ACTUALIZA ANIO')
+                  REPAMM         2S 0       COLHDG('ACTUALIZA MES')
+                  REPADD         2S 0       COLHDG('ACTUALIZA DIA')
+
+                K REPCOD

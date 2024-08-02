@@ -1,0 +1,20 @@
+      *****************************************************************
+      * Nombre: Alvaro Figueroa                                       *
+      * Objetivo: Archivo de Ordenes Cabecera                         *
+      *****************************************************************
+                                            UNIQUE
+                R RRETORH
+                  RORCOD         9S 0       COLHDG('CODIGO ORDEN')
+                  RORPRV         9S         COLHDG('CODIGO PROVEDOR')
+                  ROREST         1A         COLHDG('ESTADO')
+      * P = Pendiente
+      * E = En proceso
+      * C = Completada
+      * X = Eliminada
+                  RORCRT          Z         COLHDG('CREACION ORDEN')
+                  RORPGM        20A         COLHDG('PROGRAMA')
+                  RORTOT        17S 2       COLHDG('TOTAL ORDEN')
+                  RORUSR        10A         COLHDG('USUARIO CREACION')
+                  RORUSP        10A         COLHDG('USUARIO ACTUALIZA')
+                  RORUPT        10A         COLHDG('TIME ACTUALIZA')
+                K RORCOD

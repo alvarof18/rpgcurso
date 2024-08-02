@@ -1,0 +1,10 @@
+      ****************************************************************
+      * Nombre:Alvaro Figueroa                                      *
+      * Objetivo: Archivo de Mensajes de error                       *
+      ****************************************************************
+                                            UNIQUE
+                R RRETMSG
+                  REGCOD         4S 0       COLHDG('CODIGO MENSAJE')
+                  REGNOM       500A         COLHDG('DESCRIPCION MENSAJE')
+
+                K REGCOD

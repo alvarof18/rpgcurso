@@ -1,0 +1,13 @@
+      *****************************************************************
+      * Nombre: Alvaro Figueroa                                       *
+      * Objetivo: Archivo de Ordenes Detalle                          *
+      *****************************************************************
+
+                R RRETORD
+                  RDRCOO         9S 0       COLHDG('CODIGO ORDEN')
+                  RDRPRC         9S         COLHDG('CODIGO PRODUCTO')
+                  RDRCAN         3S 0       COLHDG('CANTIDAD')
+                  RDRPRP        17S 2       COLHDG('PRECIO')
+                  RDRSUB        17S 2       COLHDG('SUBTOTAL')
+
+                K RDRCOO

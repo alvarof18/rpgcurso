@@ -1,0 +1,108 @@
+     A*%%TS  SD  20240802  183130  ALVARODEV   REL-V7R5M0  5770-WDS
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      CF03(03 'Salir')
+     A                                      CF04(04 'Productos')
+     A                                      CF10(10 'Salir')
+     A                                      VLDCMDKEY(25 'Enter')
+     A                                      CF01(01 'Aceptar')
+     A          R RORD000SFL                SFL
+     A*%%TS  SD  20240802  183130  ALVARODEV   REL-V7R5M0  5770-WDS
+     A            $PROCOD        9Y 0O 11  6
+     A            $PRONAM       30A  O 11 17
+     A            $PROCAN        4S 0O 11 48
+     A            $PROPRE        7Y 2O 11 53EDTWRD('     .  ')
+     A            $SUBTOTAL      7Y 2O 11 62EDTWRD('     .  ')
+     A          R RORD000CTL                SFLCTL(RORD000SFL)
+     A*%%TS  SD  20240802  183130  ALVARODEV   REL-V7R5M0  5770-WDS
+     A                                      OVERLAY
+     A  40                                  SFLDSP
+     A  41                                  SFLDSPCTL
+     A  42                                  SFLINZ
+     A  43                                  SFLCLR
+     A  44                                  SFLEND
+     A                                      SFLSIZ(9999)
+     A                                      SFLPAG(0010)
+     A                                  1  2SYSNAME
+     A                                  2  2USER
+     A            TITLE         30A  O  1 26DSPATR(RI)
+     A                                  1 69TIME
+     A                                  2 69DATE
+     A                                      EDTCDE(Y)
+     A                                  4 25'Proveedor:'
+     A                                      COLOR(BLU)
+     A                                  5  3'Estado:'
+     A                                      COLOR(BLU)
+     A                                  6  3'Fecha de Orden......:'
+     A                                      COLOR(BLU)
+     A                                  6 38'Total...............:'
+     A                                      COLOR(BLU)
+     A                                  7  3'Ultima Actualizacion:'
+     A                                      COLOR(BLU)
+     A                                  8  3'Usuario.............:'
+     A                                      COLOR(BLU)
+     A                                  7 38'Usuario Act.........:'
+     A                                      COLOR(BLU)
+     A                                  4  3'Orden #:'
+     A                                      COLOR(BLU)
+     A            $NRORD         9A  O  4 13DSPATR(HI)
+     A                                      DSPATR(RI)
+     A                                      COLOR(WHT)
+     A            $CODPRV        4Y 0B  4 37
+     A  99                                  DSPATR(PR)
+     A                                      EDTCDE(4)
+     A            $DSCPRV       30A  O  4 42COLOR(BLU)
+     A            $STSORD        1A  O  5 11COLOR(YLW)
+     A                                      DSPATR(UL)
+     A                                  5 13'P=Pendiente C=Completado E=En Proc-
+     A                                      eso X=Eliminado'
+     A                                      COLOR(WHT)
+     A            $CRTORD        8A  O  6 26COLOR(WHT)
+     A                                      DSPATR(UL)
+     A            $TOTAL         7Y 2O  6 60EDTWRD('     .  ')
+     A                                      COLOR(RED)
+     A            $UPDATE        8Y 0O  7 26COLOR(WHT)
+     A                                      EDTCDE(4)
+     A            $USRUPD       10A  O  7 60COLOR(WHT)
+     A                                      DSPATR(UL)
+     A            $USRCRT       10A  O  8 26COLOR(WHT)
+     A                                      DSPATR(UL)
+     A                                  9  3'                               PRO-
+     A                                      DUCTOS                             -
+     A                                       '
+     A                                      DSPATR(HI)
+     A                                      DSPATR(RI)
+     A                                 10  7'Codigo'
+     A                                      COLOR(BLU)
+     A                                 10 17'Descripcion'
+     A                                      COLOR(BLU)
+     A                                 10 48'Cant'
+     A                                      COLOR(BLU)
+     A                                 10 54'Precio'
+     A                                      COLOR(BLU)
+     A                                 10 62'Subtotal'
+     A                                      COLOR(BLU)
+     A          R RORD000PIE
+     A*%%TS  SD  20240802  175834  ALVARODEV   REL-V7R5M0  5770-WDS
+     A                                      OVERLAY
+     A                                 23 20'F3 = Salir   F4 = Productos  F10 =-
+     A                                       Grabar'
+     A                                      COLOR(WHT)
+     A            $MSG          70   O 22  3COLOR(RED)
+     A          R RORD000W
+     A*%%TS  SD  20240802  181547  ALVARODEV   REL-V7R5M0  5770-WDS
+     A                                      WINDOW(5 10 10 50)
+     A                                  1 17'LISTA DE PRODUCTOS'
+     A                                      COLOR(WHT)
+     A                                      DSPATR(RI)
+     A                                  3  4'Codigo de producto:'
+     A                                  4  4'Descripcion:'
+     A                                  5  4'Cantidad:'
+     A                                  6  4'Precio:'
+     A            $WCODPRO       9Y 0B  3 24EDTCDE(4)
+     A            $WDSCPRO      20   O  4 17
+     A            $WPROCAN       4Y 0B  5 14EDTCDE(4)
+     A            $WPROPRE      10Y 2O  6 12EDTWRD('        .  ')
+     A                                  9 14'F1 = Aceptar  F3 = Salir'
+     A                                      COLOR(WHT)
+     A            $WMSG         40A  O  8  4COLOR(RED)

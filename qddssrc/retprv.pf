@@ -1,0 +1,16 @@
+      ****************************************************************
+      * Nombre:Alvaro Figueroa                                      *
+      * Objetivo: Archivo de proveedores                             *
+      ****************************************************************
+                R RRETPRV
+                  REVCOD         9S 0       COLHDG('CODIGO')
+                  REVNOM       100A         COLHDG('NOMBRE PROVEEDOR')
+                  REVEST         1A         COLHDG('ESTADO')
+      * A = Activo
+      * I = Inactivo
+                  REVPAS    R               COLHDG('PAIS')
+                                            REFFLD(REXCOD RETPARM)
+      * Tabla PS
+                  REVTIM          Z          COLHDG('TIMESTAMP')
+
+                K REVCOD
